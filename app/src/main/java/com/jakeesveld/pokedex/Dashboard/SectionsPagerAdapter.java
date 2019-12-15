@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.jakeesveld.pokedex.Dashboard.Search.SearchFragment;
 import com.jakeesveld.pokedex.R;
 
 /**
@@ -27,9 +28,13 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a DashboardFragment (defined as a static inner class below).
-        return DashboardFragment.newInstance(position + 1);
+        switch (position){
+            case 0:
+                return DashboardFragment.newInstance();
+            case 1:
+                return SearchFragment.newInstance();
+        }
+        return null;
     }
 
     @Nullable

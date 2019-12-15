@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">PokeDex</string>
     <string name="title_activity_dashboard">DashboardActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">Dashboard</string>
+    <string name="tab_text_2">Search</string>
 </resources>
