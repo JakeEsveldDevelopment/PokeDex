@@ -11,11 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.jakeesveld.pokedex.R;
 import com.jakeesveld.pokedex.models.Pokemon;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class SearchListAdapter extends RecyclerView.Adapter<SearchListAdapter.ViewHolder> {
-    List<Pokemon> dataList;
+    private List<Pokemon> dataList;
 
     public SearchListAdapter(List<Pokemon> dataList) {
         this.dataList = dataList;
@@ -33,6 +34,7 @@ public class SearchListAdapter extends RecyclerView.Adapter<SearchListAdapter.Vi
         Pokemon data = dataList.get(position);
         holder.textName.setText(data.getName());
         holder.textId.setText(data.getId());
+        Picasso.get().load(data.getSprites().getFrontDefault()).into(holder.imageSprite);
     }
 
     @Override
