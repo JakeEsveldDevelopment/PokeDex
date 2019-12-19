@@ -7,6 +7,7 @@
     tools:context=".Dashboard.Search.SearchFragment">
 
     <EditText
+        android:id="@+id/edit_search"
         android:hint="Enter id or name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

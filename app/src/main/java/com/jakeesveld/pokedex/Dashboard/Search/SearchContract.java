@@ -18,5 +18,7 @@ public interface SearchContract {
 
         void getPokemonByName(String name);
 
+        void processSearch(String query);
+
     }
 }
